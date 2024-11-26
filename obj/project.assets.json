@@ -14,11 +14,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "I:\\NexEd\\Kennisopdracht\\RPG-Store\\RPG-Store.csproj",
+      "projectUniqueName": "I:\\NexEd\\Kennisopdracht\\TextRPG-Store\\RPG-Store\\RPG-Store.csproj",
       "projectName": "RPG-Store",
-      "projectPath": "I:\\NexEd\\Kennisopdracht\\RPG-Store\\RPG-Store.csproj",
+      "projectPath": "I:\\NexEd\\Kennisopdracht\\TextRPG-Store\\RPG-Store\\RPG-Store.csproj",
       "packagesPath": "C:\\Users\\aliab\\.nuget\\packages\\",
-      "outputPath": "I:\\NexEd\\Kennisopdracht\\RPG-Store\\obj\\",
+      "outputPath": "I:\\NexEd\\Kennisopdracht\\TextRPG-Store\\RPG-Store\\obj\\",
       "projectStyle": "PackageReference",
       "UsingMicrosoftNETSdk": false,
       "fallbackFolders": [

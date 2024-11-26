@@ -1,0 +1,15 @@
+I:\NexEd\Kennisopdracht\TextRPG-Store\RPG-Store\obj\Debug\net8.0\RPG-Store.GeneratedMSBuildEditorConfig.editorconfig
+I:\NexEd\Kennisopdracht\TextRPG-Store\RPG-Store\obj\Debug\net8.0\RPG-Store.AssemblyInfoInputs.cache
+I:\NexEd\Kennisopdracht\TextRPG-Store\RPG-Store\obj\Debug\net8.0\RPG-Store.AssemblyInfo.cs
+I:\NexEd\Kennisopdracht\TextRPG-Store\RPG-Store\obj\Debug\net8.0\RPG-Store.csproj.CoreCompileInputs.cache
+I:\NexEd\Kennisopdracht\TextRPG-Store\RPG-Store\obj\Debug\net8.0\RPG-Store.sourcelink.json
+I:\NexEd\Kennisopdracht\TextRPG-Store\RPG-Store\bin\Debug\net8.0\RPG-Store.exe
+I:\NexEd\Kennisopdracht\TextRPG-Store\RPG-Store\bin\Debug\net8.0\RPG-Store.deps.json
+I:\NexEd\Kennisopdracht\TextRPG-Store\RPG-Store\bin\Debug\net8.0\RPG-Store.runtimeconfig.json
+I:\NexEd\Kennisopdracht\TextRPG-Store\RPG-Store\bin\Debug\net8.0\RPG-Store.dll
+I:\NexEd\Kennisopdracht\TextRPG-Store\RPG-Store\bin\Debug\net8.0\RPG-Store.pdb
+I:\NexEd\Kennisopdracht\TextRPG-Store\RPG-Store\obj\Debug\net8.0\RPG-Store.dll
+I:\NexEd\Kennisopdracht\TextRPG-Store\RPG-Store\obj\Debug\net8.0\refint\RPG-Store.dll
+I:\NexEd\Kennisopdracht\TextRPG-Store\RPG-Store\obj\Debug\net8.0\RPG-Store.pdb
+I:\NexEd\Kennisopdracht\TextRPG-Store\RPG-Store\obj\Debug\net8.0\RPG-Store.genruntimeconfig.cache
+I:\NexEd\Kennisopdracht\TextRPG-Store\RPG-Store\obj\Debug\net8.0\ref\RPG-Store.dll
