@@ -6,6 +6,7 @@ class Program
 {
     static void Main(string[] args)
     {
-        
+        RunShop run = new RunShop();
+        run.Loop();
     }
 }

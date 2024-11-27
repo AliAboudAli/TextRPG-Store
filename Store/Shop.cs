@@ -5,6 +5,7 @@ public class Shop
     //Menu voor de winkel
     public void ViewMenu()
     {
+        //fabro is referenced van AC 2 
         Console.WriteLine("Welcome visitor to Fabro!");
         Console.WriteLine("Number 1 : Inventory");
         Console.WriteLine("Number 2 : Buy");

@@ -38,7 +38,11 @@ public class Inventory
          //aantal willekeurige items 
          for (int i = 0; i < rand.Next(1, 6); i++)
          {
-             var newItem = new Weapon($"Sword {i + 1}",rand.Next(50, 200), rand.Next(1, 10), 100, rand.Next(10, 50));
+             //kom hier terug als je alleen zwaard ziet in de inventory
+             //voeg nieuwe items toe van de overige 2 klassen
+             //of als die alleen zwaarden randomized en niet de overige 2 klassen
+             var newItem = new Weapon($"Sword {i + 1}",
+                 rand.Next(50, 200), rand.Next(0, 100), 10, rand.Next(10, 50),rand.Next(10,50), rand.Next(10,50));
              Additems(newItem); //dit voegt willekeurige item toe aan de inventory
          }
      }
