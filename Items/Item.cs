@@ -5,14 +5,12 @@ namespace RPG_Store.Items;
 
 public abstract class Item
 {
-    private int _gold; 
-
     //eigenschap voor goud
     //veilig op te slaan voor goud waarde voor de currency
     public int gold
     {
-        get => gold = 0; //stuurt de waarde van gold terug 
-        set => gold = value; // stelt een waarde van goud in
+        get;
+        set;
     }
     
     //eigenschappen
@@ -32,8 +30,8 @@ public abstract class Item
     public virtual void DisplayStatus()
     {
         Console.WriteLine($"{name} =" +
-                          $" price: {price} = In Stock: " + 
-                                     $"{stock} = Gold: " +
-                                     $"{gold}");
+                          $"price: {price} = " + 
+                          $"In Stock: {stock} = " +
+                          $"Gold: {gold}");
     }
 }

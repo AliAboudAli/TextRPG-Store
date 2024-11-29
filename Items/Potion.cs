@@ -3,10 +3,10 @@
 public class Potion : Item
 {
     private string Effect { get; set; }
-    private float Duration { get; set; }
+    private double Duration { get; set; }
     private bool Drinkable { get; set; }
 
-    public Potion(string name, int stock, int price, int gold, string effect, float duration, bool drinkable)
+    public Potion(string name, int stock, int price, int gold, string effect, double duration, bool drinkable)
         : base(name, stock, price, gold)
     {
         Effect = effect;

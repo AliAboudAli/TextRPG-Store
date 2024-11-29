@@ -1,12 +1,11 @@
 ﻿using RPG_Store.Store;
-using RPG_Store.Items;
 
 namespace RPG_Store;
 class Program
 {
     static void Main(string[] args)
     {
-        RunShop run = new RunShop();
+        RunShop run = new RunShop(); //Niels vindt dit prettig :)
         run.Loop();
     }
 }

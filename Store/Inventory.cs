@@ -19,12 +19,14 @@ public class Inventory
              Console.WriteLine("We don't have any items due to black friday and cyber monday :/");
              return;
          }
-
-         //laat je inventory zien dan zij het zoeken naar elk item in de inventory
-         Console.WriteLine("Your inventory:");
-         foreach (var item in inventory)
+         else
          {
-             item.DisplayStatus();//toon de item in de inventory van de winkel sinkel
+             //laat je inventory zien dan zij het zoeken naar elk item in de inventory
+             Console.WriteLine("Your inventory:");
+             foreach (var item in inventory)
+             {
+                 item.DisplayStatus();//toon de item in de inventory van de winkel sinkel
+             }
          }
      }
      //item wordt verwijderd als de gebruiker iets koopt in de winkel
@@ -32,18 +34,50 @@ public class Inventory
      {
          inventory.Remove(item);
      }
+     
+     /// <summary>
+     /// willekeurige genereert de inventory(winkel)
+     /// items kunnen leeg in de inventory zijn (niet beschikbaar)
+     /// </summary>
      //laat een willekeurige nieuwe items genereren en toe te voegen aan de inventory
      public void GenerateItems()
      {
+         inventory.Clear();
+         int numItems = rand.Next(5, 10);
+         
          //aantal willekeurige items 
-         for (int i = 0; i < rand.Next(1, 6); i++)
+         for (int i = 0; i < numItems; i++)
          {
-             //kom hier terug als je alleen zwaard ziet in de inventory
-             //voeg nieuwe items toe van de overige 2 klassen
-             //of als die alleen zwaarden randomized en niet de overige 2 klassen
-             var newItem = new Weapon($"Sword {i + 1}",
-                 rand.Next(50, 200), rand.Next(0, 100), 10, rand.Next(10, 50),rand.Next(10,50), rand.Next(10,50));
-             Additems(newItem); //dit voegt willekeurige item toe aan de inventory
+             int stock = rand.Next(0, 20);
+             int price = rand.Next(5, 55);
+             int value = rand.Next(10, 100);
+             
+             
+             switch (rand.Next(3))
+             {
+                 case 0:
+                     Additems(new Weapon($"Sword {i + 1}", price, stock, value, 
+                         rand.Next(5, 30), 
+                           rand.Next(10, 50),
+                           rand.Next(5, 70)
+                     ));
+                     break;
+                 
+                 case 1:
+                     Additems(new Armor($"Armor {i + 1}", price, stock, value,
+                         rand.Next(1, 100),
+                         rand.Next(2, 30)
+                         ));
+                     break;
+                 case 2 :
+                     Additems(new Potion($"Potion {i + 1}" , price, stock, value,
+                         "Healing",
+                         rand.Next(1, 55),
+                         true
+                     ));
+                     break;
+             }
          }
+         DisplayItems();
      }
 }
