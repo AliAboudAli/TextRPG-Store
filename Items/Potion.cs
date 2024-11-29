@@ -1,24 +1,23 @@
-﻿namespace RPG_Store.Items;
-
-public class Potion : Item
+﻿namespace RPG_Store.Items
 {
-    private string Effect { get; set; }
-    private double Duration { get; set; }
-    private bool Drinkable { get; set; }
-
-    public Potion(string name, int stock, int price, int gold, string effect, double duration, bool drinkable)
-        : base(name, stock, price, gold)
+    public class Potion : Item
     {
-        Effect = effect;
-        Duration = duration;
-        Drinkable = drinkable;
-    }
+        public string Effect { get; set; }
+        public int Power { get; set; }
 
-    public override void DisplayStatus()
-    {
-        base.DisplayStatus();
-        Console.WriteLine($"Effect: {Effect}");
-        Console.WriteLine($"Duration: {Duration} minutes");
-        Console.WriteLine($"Drinkable: {Drinkable}");
+        public  string Type => "Potion"; //nodig voor het opslaan van de potion in de database op in de laden
+        
+        public Potion(string name, int price, int stock, int gold, string effect, int power)
+            : base(name, price, stock, gold)
+        {
+            Effect = effect;
+            Power = power;
+        }
+
+        public override void DisplayStatus()
+        {
+            base.DisplayStatus();
+            Console.WriteLine($"Effect: {Effect}, Power: {Power}");
+        }
     }
 }

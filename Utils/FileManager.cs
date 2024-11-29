@@ -1,9 +1,6 @@
-﻿using System;
-using System.IO;
-using System.Text.Json;
+﻿using System.Text.Json;
 using RPG_Store.Items;
 using RPG_Store.Store;
-using System.Collections.Generic;
 
 namespace RPG_Store.Utils
 {
@@ -11,25 +8,14 @@ namespace RPG_Store.Utils
     {
         private const string Path = "inventory.json";
 
-        // Methode om de inventaris op te slaan
+        //opslaan de inventory
         public static void SaveInventory(Inventory inventory)
         {
             try
             {
-                // Controleer of het bestand bestaat
-                if (File.Exists(Path))
-                {
-                    string write = JsonSerializer.Serialize(inventory.inventory);
-                    File.WriteAllText(Path, write);
-                    Console.WriteLine("Game File Saved");
-                }
-                else
-                {
-                    // Als het bestand nog niet bestaat, wordt het nieuw aangemaakt
-                    string write = JsonSerializer.Serialize(inventory.inventory);
-                    File.WriteAllText(Path, write);
-                    Console.WriteLine("Game File Created and Saved");
-                }
+                string write = JsonSerializer.Serialize(inventory.inventory);
+                File.WriteAllText(Path, write);
+                Console.WriteLine("Game File Saved");
             }
             catch (Exception e)
             {
@@ -37,29 +23,27 @@ namespace RPG_Store.Utils
             }
         }
 
-        // Methode om de inventaris te laden
+        // laad vanuit de laatste save 
         public static void LoadInventory(Inventory inventory)
         {
             try
             {
-                // Controleer of het bestand bestaat
                 if (File.Exists(Path))
                 {
-                    string read = File.ReadAllText(Path);
+                    string json = File.ReadAllText(Path);
+                    var items = JsonSerializer.Deserialize<List<Item>>(json);
 
-
-                    inventory.inventory = JsonSerializer.Deserialize<List<Item>>(read);
-
-                    Console.WriteLine("Game File Loaded successfully");
+                    inventory.inventory = items ?? new List<Item>(); 
+                    Console.WriteLine("Game File Loaded successfully.");
                 }
                 else
                 {
-                    Console.WriteLine("Game File not found");
+                    Console.WriteLine("Game File not found.");
                 }
             }
-            catch (Exception error)
+            catch (Exception ex)
             {
-                Console.WriteLine($"Warning, something went wrong. Read the following message: {error.Message}");
+                Console.WriteLine($"Error while loading inventory: {ex.Message}");
             }
         }
     }
