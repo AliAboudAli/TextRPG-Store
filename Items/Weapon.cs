@@ -6,7 +6,6 @@
         public int Range { get; set; }
         public int Speed { get; set; }
 
-        public  string Type => "Weapon";
         public Weapon(string name, int price, int stock, int gold, int damage, int range, int speed)
             : base(name, price, stock, gold)
         {

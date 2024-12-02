@@ -5,8 +5,6 @@
         public int Defense { get; set; }
         public int Handling { get; set; }
 
-        public  string Type => "Armor";
-
         public Armor(string name, int price, int stock, int gold, int defense, int handling)
             : base(name, price, stock, gold)
         {

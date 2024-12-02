@@ -37,7 +37,7 @@ public class ShopLogic
     /// - balanceUpdate
     /// </returns>
     /// </summary>
-    public static (bool isFinished, int stockUpdate, int balanceUpdate)
+    public static (bool isFinished, int stockUpdate, int balanceUpdate) // de bedoeling voor deze tuple methode is om de methode vaak wilt gebruiken en niet hoeft opnieuw te gebruiken
     buyItem(Inventory inventory, ref int userbalanceGold, bool isBuying)
     {
         if (isBuying) // Controle voor koop waar is, dit is nodig dat de gebruiker met 0 gold toch niet items kan kopen
@@ -97,12 +97,6 @@ public class ShopLogic
                     }
                     return (false, selectedItem.stock, userbalanceGold); // Transactie mislukt
                 }
-            }
-            else
-            {
-                // Geen items beschikbaar in de winkel
-                Console.WriteLine("No items available in stock.");
-                return (false, 0, userbalanceGold);
             }
         }
         return (false, 0, userbalanceGold);
